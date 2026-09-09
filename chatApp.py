@@ -7,14 +7,14 @@ st.title("💬 Public Ollama Chat Application")
 
 # 1. Configuration Sidebar for Public/Remote Server Use
 # st.sidebar.header("Connection Settings")
-ollama_host = st.sidebar.text_input(
-    "Ollama Server URL", 
-    value="http://localhost:11434",
-    help="Point this to your public or local Ollama instance."
-)
+# ollama_host = st.sidebar.text_input(
+#     "Ollama Server URL", 
+#     value="http://localhost:11434",
+#     help="Point this to your public or local Ollama instance."
+# )
 
 # Initialize the Ollama Client with the custom host
-client = ollama.Client(host=ollama_host)
+client = ollama.Client(host=http://host.docker.internal:11434)
 
 # Fetch available models dynamically
 try:
