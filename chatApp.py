@@ -14,7 +14,7 @@ st.title("💬 Public Ollama Chat Application")
 # )
 
 # Initialize the Ollama Client with the custom host
-client = ollama.Client(host=http://host.docker.internal:11434)
+client = ollama.Client(host="http://host.docker.internal:11434")
 
 # Fetch available models dynamically
 try:
