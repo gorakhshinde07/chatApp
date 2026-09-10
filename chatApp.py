@@ -1,5 +1,5 @@
 import streamlit as st
-import ollama
+from ollama import Client
 import os
 
 # Configure page settings
@@ -13,11 +13,12 @@ st.title("💬 Public Ollama Chat Application")
 #     value="http://localhost:11434",
 #     help="Point this to your public or local Ollama instance."
 # )
-
+os.environ["OLLAMA_API_KEY"] = "f6bae5e8d0db4ab78f0ce5af1db2f6db"
+api_key = os.getenv("OLLAMA_API_KEY")
 # Initialize the Ollama Client with the custom host
-client = ollama.Client(
+client = Client(
     host="https://ollama.com",
-    headers={'Authorization': 'Bearer ' + os.environ.get('api_key')}
+    headers={'Authorization': 'Bearer ' + os.environ.get(api_key)}
 )
 
 # Fetch available models dynamically
