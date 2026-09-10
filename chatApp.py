@@ -1,5 +1,6 @@
 import streamlit as st
 import ollama
+import os
 
 # Configure page settings
 st.set_page_config(page_title="Public AI Chatbot", page_icon="💬", layout="centered")
