@@ -14,7 +14,10 @@ st.title("💬 Public Ollama Chat Application")
 # )
 
 # Initialize the Ollama Client with the custom host
-client = ollama.Client(host="127.0.0.1:11434")
+client = ollama.Client(
+    host="https://ollama.com",
+    headers={'Authorization': 'Bearer ' + os.environ.get('f6bae5e8d0db4ab78f0ce5af1db2f6db.vnHvVfLw6wPA8lX2OzkEJURS')}
+)
 
 # Fetch available models dynamically
 try:
